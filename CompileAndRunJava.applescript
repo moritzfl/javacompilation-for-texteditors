@@ -50,11 +50,11 @@ try
 	tell application "Terminal"
 		activate
 		if (package_name is "") then
-			set shell_script to "cd " & quoted form of folder_path & Â
+			set shell_script to "cd " & quoted form of folder_path & Â¬
 				"; javac " & compiled_name & ".java"
 		else
-			set shell_script to "cd " & quoted form of folder_path & Â
-				"; javac ./**/*.java"
+			set shell_script to "cd " & quoted form of folder_path & Â¬
+				"; find . -name \"*.java\" -print | xargs javac "
 		end if
 		if (count windows) is 0 then
 			do script shell_script
