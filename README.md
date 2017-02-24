@@ -1,7 +1,7 @@
 # TextwranglerJavaCompilation
-[English](#en)
-[German](#de)
-##English<a name="en"></a>
+[Jump to German description](#de)
+<a name="en"></a>
+##English
 This script enables the compilation and execution of .java-files directly from the 
 inteface of Textwrangler. This also works with package-structures as long as this does
 not include the use of external library-jars.
@@ -17,13 +17,13 @@ Steps to use the script:
  but you should save the file before executing the script)
 - Click on "ComplileAndRunJava" in the script-menu of Textwrangler
 
-
-##German<a name="de"></a>
-Dieses Skript ermöglichen es, direkt aus Textwrangler heraus .java-Dateien zu kompilieren
+<a name="de"></a>
+##German
+Dieses Skript ermöglicht es, direkt aus Textwrangler heraus .java-Dateien zu kompilieren
 und zu starten. Dies funktioniert auch mit package-Strukturen ohne zusätzliche
 Library-jars.
 
-Dazu müssen die Skripte wie folgt installiert werden:
+Dazu muss das Skript wie folgt installiert werden:
 -	Textwrangler öffnen
 - 	in der Menüleiste auf das Skript-Icon (sieht aus wie ein S aus Papier) klicken und auf
 	"Open Scripts Folder" klicken.
