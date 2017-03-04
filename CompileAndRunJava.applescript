@@ -66,9 +66,11 @@ if (no_error) then
 		activate
 		
 		if (package_name is "") then
-			set shell_script to "java " & compiled_name
+			set shell_script to "cd " & quoted form of folder_path & ¬ 
+			       "; java " & compiled_name
 		else
-			set shell_script to "java " & package_name & "." & compiled_name
+			set shell_script to "cd " & quoted form of folder_path & ¬
+			       "; java " & package_name & "." & compiled_name
 		end if
 		
 		if (count windows) is 0 then
