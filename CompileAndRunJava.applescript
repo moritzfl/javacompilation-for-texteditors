@@ -30,21 +30,15 @@ repeat with next_line in file_contents
 		end if
 	end if
 end repeat
-if package_name contains "." then
-	set package_subpath to replace_text(package_name, ".", "/")
-else
-	set package_subpath to (package_name)
-end if
 
 tell application "Finder"
-	set folder_path to (POSIX path of ((container of file the_file) as string)) as string
-	set astid to AppleScript's text item delimiters
-	set AppleScript's text item delimiters to package_subpath
-	set TIs to folder_path's text items -- Any case of package_subpath in folder_path will be replaced.
-	set AppleScript's text item delimiters to ""
-	set folder_path to TIs as Unicode text
-	set AppleScript's text item delimiters to astid
+	if (package_name is "") then
+		set folder_path to (POSIX path of ((container of file the_file) as string)) as string
+	else
+		set folder_path to text 1 thru (-1 * (2 + (length of package_name))) of (POSIX path of ((container of file the_file) as string)) as string
+	end if
 end tell
+
 
 try
 	tell application "Terminal"
