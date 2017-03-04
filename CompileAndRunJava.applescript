@@ -22,7 +22,7 @@ set package_name to ""
 
 set file_contents to paragraphs of (read file the_file)
 repeat with next_line in file_contents
-	if {next_line contains "package "} then
+	if {next_line contains "package " and package_name is ""} then
 		set package_name to replace_text(next_line, "package ", "")
 		set package_name to replace_text(package_name, ";", "")
 		if package_name contains " " then
