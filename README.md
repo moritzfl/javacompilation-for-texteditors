@@ -1,15 +1,18 @@
-# JavaCompilation for BBEdit
-[Jump to German description](#de)
+# JavaCompilation for Texteditors
 
-Note: A legacy version for the popular Textwrangler-Editor exists aswell in this repository.
-The developer has however dropped Support for Textwrangler and is promoting BBEdit as alternative.
-BBEdit will offer you the same functionality as TextWrangler even after the trial period.
-
-## English
+## What does this script do?
 This script enables the compilation and execution of .java-files directly from the 
-inteface of BBEdit. This also works with package-structures as long as this does
+inteface of your Text-Editor. This also works with package-structures as long as this does
 not include the use of external library-jars.
 
+## What Editors can be used?
+This script was written for and tested with BBEdit (and previously Textwrangler). It is however agnostic of the editor
+in use as long as it is called directly with the editor being the active window in the front.
+
+Background: The script tries to use frontmost document in the frontmost application as basis for compilation and execution.
+If that is your Texteditor and the Texteditor supports macOS's scripting features everything is fine.
+
+## Setup with BBEdit
 Steps to get the scripts installed:
 - open BBEdit
 - click the script-icon in the menubar (it looks like an S made of paper) and click on 
@@ -20,21 +23,3 @@ Steps to use the script:
 - Open .java-file in BBEdit (also works when you are currently creating a java-file
  but you should save the file before executing the script)
 - Click on "ComplileAndRunJava" in the script-menu of BBEdit
-
-
-## <a name="de"></a>German
-Dieses Skript ermöglicht es, direkt aus BBEdit heraus .java-Dateien zu kompilieren
-und zu starten. Dies funktioniert auch mit package-Strukturen ohne zusätzliche
-Library-jars.
-
-Dazu muss das Skript wie folgt installiert werden:
--	BBEdit öffnen
-- 	in der Menüleiste auf das Skript-Icon (sieht aus wie ein S aus Papier) klicken und auf
-	"Open Scripts Folder" klicken.
--	das Skript in den Ordner kopieren
-
-Die Verwendung der Skripte verläuft wie folgt:
--	.java-Datei in BBEdit öffnen (funktioniert natürlich auch, wenn man selber codet
-	und gerade eine solche Datei erstellt, in diesem Falle sollte die Datei aber auf jeden
-	Fall gespeichert werden, bevor die nächsten Schritte ausgeführt werden)
--	Im Skriptmenü in BBEdit "CompileAndRunJava" aufrufen
