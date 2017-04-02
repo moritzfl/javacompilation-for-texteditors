@@ -1,4 +1,5 @@
 # JavaCompilation for Texteditors
+!This script is targeted for macOS only!
 
 ## What does this script do?
 This script enables the compilation and execution of .java-files directly from the 
