@@ -9,7 +9,7 @@ on replace_text(this_text, search_string, replacement_string)
 end replace_text
 
 #Get the java-file to work with.
-#This would be the only thing needed to adjust for use with other applications/editors.
+#This is the only block that needs to be adjusted when used with other editors.
 tell application "BBEdit"
 	save text document 1
 	set the_file to file of text document 1
@@ -25,7 +25,7 @@ end tell
 set no_error to true
 set package_name to ""
 
-#Take the first line starting the keyword "package" and use the information to define the package name.
+#Take the first line starting with the keyword "package " and use the information to define the package name.
 #Subsequent lines starting with package do not overwrite the value once it is set.
 set file_contents to paragraphs of (read file the_file)
 repeat with next_line in file_contents
