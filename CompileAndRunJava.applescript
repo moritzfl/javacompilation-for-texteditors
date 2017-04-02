@@ -8,11 +8,12 @@ on replace_text(this_text, search_string, replacement_string)
 	return this_text
 end replace_text
 
-#Get the java-file to work with.
-#This is the only block that needs to be adjusted when used with other editors.
-tell application "BBEdit"
-	save text document 1
-	set the_file to file of text document 1
+set front_app to (path to frontmost application as Unicode text)
+
+#Get the file from the editor (Textwrangler, BBEdit etc.)
+tell application front_app
+	save front document
+	set the_file to file of front document
 end tell
 
 #Get the name of the file without the .java-Extension. The filename also represents the classname
