@@ -19,7 +19,7 @@ end tell
 #of the compiled class.
 tell application "Finder"
 	set compiled_name to name of (file the_file as alias)
-	set compiled_name to text 1 thru -6 of compiled_name
+	set compiled_name to text 1 thru (-1 * ((length of ".java") + 1)) of compiled_name
 end tell
 
 set no_error to true
