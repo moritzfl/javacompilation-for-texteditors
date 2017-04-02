@@ -3,15 +3,14 @@
 
 ## What does this script do?
 This script enables the compilation and execution of .java-files directly from the 
-inteface of your Text-Editor. This also works with package-structures as long as this does
-not include the use of external library-jars.
+inteface of your Text-Editor. It also works with package-structures as long as the use of library-jars is not required.
 
 ## What Editors can be used?
-This script was written for and tested with BBEdit (and previously Textwrangler). It is however agnostic of the editor
+The script was written for and tested with BBEdit (and previously Textwrangler). It is however agnostic of the editor
 in use as long as it is called directly with the editor being the active window in the front.
 
 Background: The script tries to use frontmost document in the frontmost application as basis for compilation and execution.
-If that is your Texteditor and the Texteditor supports macOS's scripting features everything is fine.
+If that is your texteditor and it supports macOS's scripting features everything is fine.
 
 ## Setup with BBEdit
 Steps to get the scripts installed:
