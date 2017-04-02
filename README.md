@@ -6,7 +6,7 @@ This script enables the compilation and execution of .java-files directly from t
 inteface of your Text-Editor. It also works with package-structures as long as the use of library-jars is not required.
 
 ## What Editors can be used?
-The script was written for and tested with BBEdit (and previously Textwrangler). It is however agnostic of the editor
+The script was written for and tested with BBEdit (and previously Textwrangler). It is however agnostic to the editor
 in use as long as it is called directly with the editor being the active window in the front.
 
 Background: The script tries to use frontmost document in the frontmost application as basis for compilation and execution.
