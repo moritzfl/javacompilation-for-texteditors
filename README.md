@@ -1,6 +1,8 @@
 # JavaCompilation for Texteditors
 !This script is targeted for macOS only!
 
+![Screenshot](http://moritzf.de/files/projects/javacompile.png)
+
 ## What does this script do?
 This script enables the compilation and execution of .java-files directly from the 
 inteface of your Text-Editor. It also works with package-structures as long as the use of library-jars is not required.
