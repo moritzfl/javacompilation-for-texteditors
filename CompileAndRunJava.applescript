@@ -85,13 +85,10 @@ if (no_error) then
 	tell application "Terminal"
 		activate
 		
-		if (package_name is "") then
-			set shell_script to "cd " & quoted form of folder_path & ¬
-				"; java " & compiled_name
-		else
-			set shell_script to "cd " & quoted form of folder_path & ¬
-				"; java " & package_name & "." & compiled_name
-		end if
+		
+		set shell_script to "cd " & quoted form of folder_path & ¬
+			"; java " & package_name & "." & compiled_name
+		
 		
 		if (count windows) is 0 then
 			do script shell_script
