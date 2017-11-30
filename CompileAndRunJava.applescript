@@ -57,16 +57,11 @@ end tell
 try
 	tell application "Terminal"
 		activate
-		if (package_name is "") then
-			#Define a simple javac command for single class programs without package declaration
-			set shell_script to "cd " & quoted form of folder_path & ¬
-				"; javac " & compiled_name & ".java"
-		else
-			#Define a more complex command for package structures:
-			#Find all *.java files in the directory and compile them	
-			set shell_script to "cd " & quoted form of folder_path & ¬
-				"; find . -name \"*.java\" -print | xargs javac "
-		end if
+		
+		#Define compilation targets by finding all java-files	
+		set shell_script to "cd " & quoted form of folder_path & ¬
+			"; find . -name \"*.java\" -print | xargs javac "
+		
 		#Execute the command in the terminal for the user
 		if (count windows) is 0 then
 			do script shell_script
@@ -86,8 +81,13 @@ if (no_error) then
 		activate
 		
 		
-		set shell_script to "cd " & quoted form of folder_path & ¬
-			"; java " & package_name & "." & compiled_name
+		if (package_name is "") then
+ 			set shell_script to "cd " & quoted form of folder_path & ¬
+ 				"; java " & compiled_name
+ 		else
+ 			set shell_script to "cd " & quoted form of folder_path & ¬
+ 				"; java " & package_name & "." & compiled_name
+ 		end if
 		
 		
 		if (count windows) is 0 then
