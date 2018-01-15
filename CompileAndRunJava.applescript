@@ -30,13 +30,14 @@ set package_name to ""
 #Subsequent lines starting with package do not overwrite the value once it is set.
 set file_contents to paragraphs of (read file the_file)
 repeat with next_line in file_contents
-	if (next_line starts with "package " and package_name is "") then
+	if (next_line starts with "package ") then
 		#Strip away "package ", ";" and spaces
 		set package_name to text ((length of "package ") + 1) thru -1 of next_line
 		set package_name to replace_text(package_name, ";", "")
 		if package_name contains " " then
 			set package_name to replace_text(package_name, " ", "")
 		end if
+		exit repeat
 	end if
 end repeat
 
