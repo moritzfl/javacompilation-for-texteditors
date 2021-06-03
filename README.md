@@ -1,7 +1,7 @@
 # JavaCompilation for Texteditors
 !This script is targeted for macOS only!
 
-![Screenshot](http://www.moritzf.de/projects/media/javacompile.png)
+![Screenshot](https://moritzf.de/user/pages/02.projects/04.other-projects/javacompile.png)
 
 ## What does this script do?
 This script enables the compilation and execution of .java-files directly from the 
